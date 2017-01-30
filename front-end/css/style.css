@@ -1,0 +1,98 @@
+html,
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: arial, sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+  /*color: #fff;*/
+  font-size: 80%;
+  padding: 1em;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  height: 100%;
+  background-color: 0 0 0 .7;
+  display: flex;
+  /*background-image: url('../images/toobox_big_image.jpg');*/
+  /*background-color: 255 255 255 .9;*/
+
+}
+
+article {
+  background-color: 0 0 0 .7;
+  /*background-color: #675BA7;*/
+  flex: 2 2 12em;
+  /* order: -1; */
+}
+
+nav,
+aside {
+  flex: 1;
+}
+
+/* responsiveness - stack items when they break */
+@media screen and (max-width: 500px) {
+  main {
+    flex-direction: column;
+  }
+}
+h1 {
+  font-size: 1.2em;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  height: 500px;
+  background-color: green;
+}
+
+article {
+  
+}
+
+header,
+footer,
+nav,
+article,
+aside {
+  box-sizing: border-box;
+  padding: 1em;
+  text-align: center;
+}
+
+header,
+
+
+footer {
+  height: auto;
+  height: 3.3em;
+}
+header {
+  /*outline: black solid;*/
+  /*border: 5px;
+  border-color: black solid;*/
+  /*background-color: #A62E5C;*/
+}
+nav {
+  /*outline: black solid;*/
+  border-top: 0px;
+  /*background-color: #9BC850;*/
+}
+aside {
+  /*outline: black solid;*/
+  /*background-color: #2A9FBC;*/
+}
+
+footer {
+  /*outline: black solid;*/
+  /*background-color: #F15B2A;*/
+}

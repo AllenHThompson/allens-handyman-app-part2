@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html ng-app="my-app">
+<head>
+  <meta charset="utf-8">
+  <title>My Handyman App Part 2</title>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <title></title>
+  <script src="dependencies/angular.js"></script>
+  <script src="dependencies/angular-route.js"></script>
+  <script src="dependencies/angular-cookies.js"></script>
+  <script src="dependencies/jquery.js"></script>
+
+  <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+  <script src="https://checkout.stripe.com/checkout.js"></script>
+
+  <script type="text/javascript">
+    Stripe.setPublishableKey('pk_test_etAw7vNMpUggsCRpMvZTY8Gw');
+    var handler = StripeCheckout.configure({
+      key: 'pk_test_etAw7vNMpUggsCRpMvZTY8Gw',
+      locale: 'auto',
+      token: function(token) {
+
+      }
+    });
+  </script>
+
+  <script src="app.js"></script>
+  <!-- /*COMMENTED OUT BOOTSTRAP B/C IT WAS MAKING FONT REALLY SMALL*/ -->
+  <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+  <header class="page-header">
+    <h1>My Handyman App Part 2</h1>
+  </header>
+
+  <main class="page-content">
+    <article class="content-article">
+      <h1>Main Content</h1>
+      <ng-view></ng-view>
+    </article>
+
+    <nav class="content-navigation">
+      <h1>Navigation</h1>
+      <a href="#/">Home</a>
+      <a href="#/logout">Logout</a>
+    </nav>
+
+    <!-- <aside class="content-sidebar">
+    <h1>Sidebar</h1>
+  </aside> -->
+</main>
+
+<footer class="page-footer">
+  <h1>Footer</h1>
+  <!-- <span><h3>Twitter</h3></span>
+  <span><h3>Facebook</h3></span> -->
+</footer>
+
+
+
+</body>
+</html>
